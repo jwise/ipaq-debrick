@@ -1,0 +1,16 @@
+FastJTAG FM (Fscking Manual)
+Joshua Wise
+Ian Molton
+-------------------------------------------------
+
+This project can *NOT* flash a device via the PXA boundary scan.
+
+What you can do, is (by other means) load some code into the PXA which allows faster JTAG communication, and allowing upload of code to the PXA chip for execution.
+
+jtagrx.bin is the stub that should be running on the PXA to receive the 'upload' into the PXA icache.
+
+once it is running, you can upload up to 2KB of code using the miniload program on your host machine.
+
+a program you can upload is memclient.bin, which allows you to perform various operations by 'remote control' over the JTAG lead. A program that can communicate with memclient is rdevmem, which behaves like devmem under linux (except, obviously, it is 'remote').
+
+Enjoy.

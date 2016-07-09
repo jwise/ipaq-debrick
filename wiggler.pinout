@@ -1,0 +1,15 @@
+These are the pins that one would use if one wanted to connect an iPAQ or other 3.3v JTAG device to the IBM pin header on a CPU16/CPU32/MPC5xx/MPC8xx/PPC4xx Wiggler.
+
+1 _TDO_|_____
+  _TDI_|_____
+  _____|_Vcc_
+  _TCK_|_____
+  _TMS_|_____
+  _HLT_|_____
+  _____|_---_
+  _____|_GND_
+
+That Vcc lead, however, is no good. You probably instead want to connect Vcc to the lead on the Vin header that is closest to the "IBM" header, which will allow you to power the wiggler from the iPAQ's 3.3v without the external power supply.
+
+Enjoy
+joshua

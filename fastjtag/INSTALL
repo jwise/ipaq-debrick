@@ -1,0 +1,18 @@
+Well, not really how to install I guess, but heres what to do with all this:
+
+Host utilities
+--------------
+miniload        Loads code into the PXA mini-icache and executes it.
+rdevmem         Allows you to read / write memory on the PXA (use with
+                memclient.bin)
+rdump           Dumps a region of memory from the PXA (use with memclient.bin)
+rflash          Remote reflash tool (use with memclient.bin)
+fflash          Alternative to rflash (slightly simpler)
+
+Client utilities   (load these into the PXA with miniload)
+----------------
+e7xx_leds.bin   Flashes the battery LED on the e7xx
+h1900leds.bin   ditto
+memclient.bin   Contains routines to interface with the host tools above
+                allowing fast JTAG operations (avoids using boundary scan)
+

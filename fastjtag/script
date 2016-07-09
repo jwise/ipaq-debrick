@@ -1,0 +1,14 @@
+if [ -z "$1" ]; then
+	fn=zImage
+else
+	fn=$1
+fi
+
+if [ ! -e $fn ]; then
+	echo "$fn doesn't exist"
+	exit 0
+fi
+
+../bsrflash/bsrflash p jtagrx.bin.nopad
+./miniload memclient.bin
+./rflash p $fn
